@@ -1,5 +1,11 @@
 # Unit 01: Introduction to Agents
 
+- [Unit 01: Introduction to Agents](#unit-01-introduction-to-agents)
+  - [Introduction](#introduction)
+  - [What is an Agent?](#what-is-an-agent)
+  - [What type of tasks can an Agent do?](#what-type-of-tasks-can-an-agent-do)
+  - [What are LLMs?](#what-are-llms)
+
 ## Introduction
 
 Through this course, will cover the specific model family know as Agents and how they work as well as how Agents make decisions through reasoning and planning. Additionally, this course will speak to how LLMs are the brain of the Agent. Furthermore, we will learn how tools and actions are used by the Agent to interact with its surrounding environment.
@@ -28,8 +34,16 @@ There are three types of transformers:
 
 1. Encoders
    - Consumes text (and other unstructured data) and churns out a dense representation of the text
-   - These models are adept at providing a discretizing understanding of 
+   - These models are adept at providing a compressed output or summary of what has been entered into the model
+     - Tasks like text classification use the summaries provided by the encoder model to provide a deterministic estimation of which class (good/bad movie review) the input text should fall into
+   - Millions of parameters
 2. Decoders
    - Instead of generating a dense representation of the text, decoder transformers focus on generating a new token in a sequential fashion
    - This type of transformer is largely found underlying the AI chat applications that you may use
+   - Billions of parameters
 3. Seq2Seq
+   - This is the combination of the former two types. The first part processes the input to provide context for the latter part to generate a meaningful sequence
+   - Picture two CIA operatives working jointly together on a mission in a non-English speaking nation to get intelligence back to Langley
+     - The encoder is the note taker, with the task of "listening" to the conversations by the opposing operatives and taking notes on what they have heard
+     - Next the decoder picks up those notes and uses the context provided by the encoder to complete a translation of the content learned from the mission so that it is interpable by Langley
+   - Model Size: Millions of parameters
